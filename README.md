@@ -9,5 +9,8 @@ Easy Split will create a separate log for a complete instance run, or reset, whi
 * the splits will be found in the directory alongside your *.log file
 
 ## Building
+```console
 $ git clone http://github.com/beHoeppy/EzSplit-ESO
 $ cd EzSplit-ESO
+$ cargo build -r
+```
