@@ -66,7 +66,7 @@ fn split_log(logfile: &File, output_directory: PathBuf) {
                 s.instance = String::from("");
             }
             else {
-                writeln!(&mut s.writer.as_mut().unwrap(), "{}\n", line.unwrap()).unwrap();
+                writeln!(&mut s.writer.as_mut().unwrap(), "{}", line.unwrap()).unwrap();
             }
         });
 }
