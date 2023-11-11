@@ -56,7 +56,7 @@ fn split_log(logfile: &File, output_directory: PathBuf) {
                 println!("{}", file);
 
                 s.writer = Some(Box::new(BufWriter::new(File::create(&output_directory.join(&file)).unwrap())));
-                writeln!(&mut s.writer.as_mut().unwrap(), "{}\n{}", s.instance, s.date).unwrap()
+                writeln!(&mut s.writer.as_mut().unwrap(), "{}\n{}", s.date, s.instance).unwrap()
             }
             else if line.as_ref().unwrap().contains(END_LOG) {
                 writeln!(&mut s.writer.as_mut().unwrap(), "{}\n", line.unwrap()).unwrap();
